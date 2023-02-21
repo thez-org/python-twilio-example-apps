@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 30 # Set timeout to 30 minutes; Change if your project takes longer to scan
     permissions:
       actions: read
-      contents: read
+      contents: reade
       security-events: write
 
     strategy:
@@ -42,7 +42,9 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        pip inecho "CODEQL_PYTHON=$(which python)" >> $GITHUB_ENV
+       pip install -r bottle/requirements.txt
+       pip install -r django/requirements.txt
+       echo "CODEQL_PYTHON=$(which python)" >> $GITHUB_ENV
       working-directory: . # The path to your project if its a monorepo
 
     # Initializes the CodeQL tools for scanning.
