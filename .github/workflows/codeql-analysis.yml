@@ -42,9 +42,7 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        pip install -r bottle/requirements.txt
-	pip install -r django/requirements.txt
-        echo "CODEQL_PYTHON=$(which python)" >> $GITHUB_ENV
+        pip inecho "CODEQL_PYTHON=$(which python)" >> $GITHUB_ENV
       working-directory: . # The path to your project if its a monorepo
 
     # Initializes the CodeQL tools for scanning.
