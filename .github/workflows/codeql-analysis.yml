@@ -42,8 +42,8 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-       pip install -r bottle/requirements.txt
-       pip install -r django/requirements.txt
+       pip install -r bottle/sms-mms/requirements.txt
+       pip install -r bottle/voice/requirements.txt
        echo "CODEQL_PYTHON=$(which python)" >> $GITHUB_ENV
       working-directory: . # The path to your project if its a monorepo
 
