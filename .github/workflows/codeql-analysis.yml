@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 30 # Set timeout to 30 minutes; Change if your project takes longer to scan
     permissions:
       actions: read
-      contents: reade
+      contents: read
       security-events: write
 
     strategy:
