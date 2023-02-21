@@ -3,7 +3,7 @@ name: "CodeQL"
 on:
   push:
     branches:
-      - "main"  # Change this to the branch to default branch
+      - "master"  # Change this to the branch to default branch
       - "!ignore/branch" # Ignore CodeQL scan for these branches
       - "!test/*" # Ignore CodeQL scan for these branches
     paths-ignore:
@@ -11,7 +11,7 @@ on:
       - '**/*.txt'
   pull_request:
     branches:
-      - "main"  # Change this to the branch to default branch
+      - "master"  # Change this to the branch to default branch
   schedule:
     - cron: '44 23 * * 2' # Run CodeQL scan every Friday at 11:44 PM UTC
     
